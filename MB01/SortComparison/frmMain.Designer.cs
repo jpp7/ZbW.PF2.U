@@ -1,4 +1,4 @@
-﻿namespace MB01.SortComparison
+﻿namespace MB11.SortComparison
 {
     partial class frmMain
     {

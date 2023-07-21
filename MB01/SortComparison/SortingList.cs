@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace MB01.SortComparison
+namespace MB11.SortComparison
 {
     public delegate void HighlightingEventHandler(object source, HighlightingEventArgs e);
 

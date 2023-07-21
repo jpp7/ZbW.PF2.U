@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Threading;
 
-namespace MB01.SortComparison
+namespace MB11.SortComparison
 {
     public abstract class SortAlgorithm
     {

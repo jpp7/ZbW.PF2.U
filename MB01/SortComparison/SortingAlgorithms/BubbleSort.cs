@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using MB01.SortComparison;
+using MB11.SortComparison;
 
-namespace MB01.SortComparison.SortingAlgorithms
+namespace MB11.SortComparison.SortingAlgorithms
 {
     public class BubbleSort : SortAlgorithm
     {

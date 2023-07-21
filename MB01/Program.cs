@@ -1,6 +1,6 @@
-﻿using MB01.SortComparison;
+﻿using MB11.SortComparison;
 
-namespace MB01
+namespace MB11
 {
     static class Program
     {

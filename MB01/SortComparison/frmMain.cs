@@ -4,9 +4,9 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using System.Threading;
-using MB01.SortComparison;
+using MB11.SortComparison;
 
-namespace MB01.SortComparison
+namespace MB11.SortComparison
 {
 
     public partial class frmMain : Form {
