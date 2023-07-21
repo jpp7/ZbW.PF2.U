@@ -1,4 +1,4 @@
-﻿namespace MB03.BinaryTreeAufgabe
+﻿namespace MB13.BinaryTreeAufgabe
 {
     public enum TraverseModeEnum
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace MB03.BinaryTreeAufgabe
+namespace MB13.BinaryTreeAufgabe
 {
     public class BinaryTree<T> where T : IComparable<T>
     {
