@@ -1,4 +1,4 @@
-﻿namespace MB02
+﻿namespace MB12
 {
     partial class Form1
     {

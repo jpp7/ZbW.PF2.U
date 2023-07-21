@@ -1,4 +1,4 @@
-namespace MB02
+namespace MB12
 {
     public partial class Form1 : Form
     {
