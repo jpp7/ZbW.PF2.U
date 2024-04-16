@@ -8,4 +8,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="SortComparison\SortingAlgorithms\Lsg\BubbleSort.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="SortComparison\SortingAlgorithms\Lsg\BubbleSort.txt" />
+  </ItemGroup>
+
 </Project>
