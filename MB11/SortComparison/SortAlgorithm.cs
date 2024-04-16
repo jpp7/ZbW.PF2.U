@@ -32,9 +32,8 @@ namespace MB11.SortComparison
 
         public void Setup(SortingList list, PictureBox pic, int s, string outFile)
         {
-            list.OnHighlighting += (source, args) =>
-            {
-                HighlightIndex(args.Index);
+            list.OnHighlighting += (source, args) => {
+                this.HighlightIndex(args.Index);
             };
             arrayToSort = list;
             pnlSamples = pic;
@@ -61,7 +60,7 @@ namespace MB11.SortComparison
 
         protected void HighlightIndex(int index)
         {
-            highlightedIndexes.Add(index);
+            this.highlightedIndexes.Add(index);
 
             operationCount++;
             checkForFrame();
@@ -70,7 +69,7 @@ namespace MB11.SortComparison
 
         private void checkForFrame()
         {
-            lock (sync)
+            lock (this.sync)
             {
                 if (operationCount >= operationsPerFrame || nextFrameTime <= DateTime.UtcNow)
                 {
@@ -84,7 +83,7 @@ namespace MB11.SortComparison
 
                     if (DateTime.UtcNow < nextFrameTime)
                     {
-                        Thread.Sleep((int)(nextFrameTime - DateTime.UtcNow).TotalMilliseconds);
+                        Thread.Sleep((int)((nextFrameTime - DateTime.UtcNow).TotalMilliseconds));
                     }
 
                     nextFrameTime = nextFrameTime.AddMilliseconds(frameMS);
@@ -113,7 +112,7 @@ namespace MB11.SortComparison
         {
             if (pnlSort.InvokeRequired)
             {
-                pnlSort.Invoke((MethodInvoker)delegate { RefreshPanel(pnlSort); });
+                pnlSort.Invoke((MethodInvoker)delegate { this.RefreshPanel(pnlSort); });
             }
             else
             {
@@ -124,9 +123,9 @@ namespace MB11.SortComparison
         private object sync = new object();
         public void DrawSamples()
         {
-            lock (sync)
+            lock (this.sync)
             {
-                using (arrayToSort.BlockHighlighting())
+                using (this.arrayToSort.BlockHighlighting())
                 {
                     // might need to grow or shrink if size is different from original (can't change array!)
                     double multiplyHeight = 1;
@@ -141,7 +140,7 @@ namespace MB11.SortComparison
 
                     if (pnlSamples.Height != originalPanelHeight)
                     {
-                        multiplyHeight = pnlSamples.Height / (double)originalPanelHeight;
+                        multiplyHeight = (pnlSamples.Height) / (double)(originalPanelHeight);
                     }
 
                     // start with white background
@@ -156,11 +155,11 @@ namespace MB11.SortComparison
                     var redBrush = new SolidBrush(Color.Red);
 
                     // draw a nice width based on number of elements
-                    var w = pnlSamples.Width / arrayToSort.Count - 1;
+                    var w = (pnlSamples.Width / arrayToSort.Count) - 1;
 
-                    for (var i = 0; i < arrayToSort.Count; i++)
+                    for (var i = 0; i < this.arrayToSort.Count; i++)
                     {
-                        var x = (int)((double)pnlSamples.Width / arrayToSort.Count * i);
+                        var x = (int)(((double)pnlSamples.Width / arrayToSort.Count) * i);
 
                         var itemHeight = (int)Math.Round(Convert.ToDouble(arrayToSort[i]) * multiplyHeight);
 
@@ -169,7 +168,7 @@ namespace MB11.SortComparison
                             // draw highlighed versions
                             if (w <= 1)
                             {
-                                g.DrawLine(redPen, new Point(x, pnlSamples.Height), new Point(x, pnlSamples.Height - itemHeight));
+                                g.DrawLine(redPen, new Point(x, pnlSamples.Height), new Point(x, (pnlSamples.Height - itemHeight)));
                             }
                             else
                             {
@@ -181,7 +180,7 @@ namespace MB11.SortComparison
                             // draw normal versions
                             if (w <= 1)
                             {
-                                g.DrawLine(pen, new Point(x, pnlSamples.Height), new Point(x, pnlSamples.Height - itemHeight));
+                                g.DrawLine(pen, new Point(x, pnlSamples.Height), new Point(x, (pnlSamples.Height - itemHeight)));
                             }
                             else
                             {

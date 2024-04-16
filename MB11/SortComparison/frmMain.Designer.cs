@@ -28,232 +28,201 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cboAlg1 = new System.Windows.Forms.ComboBox();
-            this.cboAlg2 = new System.Windows.Forms.ComboBox();
-            this.cmdSort = new System.Windows.Forms.Button();
-            this.pnlSort1 = new System.Windows.Forms.PictureBox();
-            this.pnlSort2 = new System.Windows.Forms.PictureBox();
-            this.tbSamples = new System.Windows.Forms.TrackBar();
-            this.lblSamples = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tbSpeed = new System.Windows.Forms.TrackBar();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.ddTypeOfData = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlSort1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlSort2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbSamples)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbSpeed)).BeginInit();
-            this.SuspendLayout();
+            cboAlg1 = new ComboBox();
+            cboAlg2 = new ComboBox();
+            cmdSort = new Button();
+            pnlSort1 = new PictureBox();
+            pnlSort2 = new PictureBox();
+            tbSamples = new TrackBar();
+            lblSamples = new Label();
+            label1 = new Label();
+            tbSpeed = new TrackBar();
+            label2 = new Label();
+            label3 = new Label();
+            folderBrowserDialog1 = new FolderBrowserDialog();
+            ddTypeOfData = new ComboBox();
+            ((System.ComponentModel.ISupportInitialize)pnlSort1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pnlSort2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)tbSamples).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)tbSpeed).BeginInit();
+            SuspendLayout();
             // 
             // cboAlg1
             // 
-            this.cboAlg1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.cboAlg1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboAlg1.FormattingEnabled = true;
-            this.cboAlg1.Items.AddRange(new object[] {
-            "",
-            "BiDirectional Bubble Sort",
-            "Bubble Sort",
-            "Comb Sort",
-            "Counting Sort",
-            "Cycle Sort",
-            "Gnome Sort",
-            "Heap Sort",
-            "Insertion Sort",
-            "Merge Sort (In Place)",
-            "Merge Sort (Double Storage)",
-            "Odd-Even Sort",
-            "Pigeonhole Sort",
-            "Quicksort",
-            "Quicksort with Insertion Sort",
-            "Radix Sort",
-            "Selection Sort",
-            "Shell Sort",
-            "Smoothsort",
-            "Timsort"});
-            this.cboAlg1.Location = new System.Drawing.Point(13, 219);
-            this.cboAlg1.Name = "cboAlg1";
-            this.cboAlg1.Size = new System.Drawing.Size(200, 21);
-            this.cboAlg1.TabIndex = 2;
+            cboAlg1.Anchor = AnchorStyles.Bottom;
+            cboAlg1.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboAlg1.FormattingEnabled = true;
+            cboAlg1.Items.AddRange(new object[] { "", "BiDirectional Bubble Sort", "Bubble Sort", "Comb Sort", "Counting Sort", "Cycle Sort", "Gnome Sort", "Heap Sort", "Insertion Sort", "Merge Sort (In Place)", "Merge Sort (Double Storage)", "Odd-Even Sort", "Pigeonhole Sort", "Quicksort", "Quicksort with Insertion Sort", "Radix Sort", "Selection Sort", "Shell Sort", "Smoothsort", "Timsort" });
+            cboAlg1.Location = new Point(112, 516);
+            cboAlg1.Margin = new Padding(5, 4, 5, 4);
+            cboAlg1.Name = "cboAlg1";
+            cboAlg1.Size = new Size(298, 28);
+            cboAlg1.TabIndex = 2;
             // 
             // cboAlg2
             // 
-            this.cboAlg2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.cboAlg2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboAlg2.FormattingEnabled = true;
-            this.cboAlg2.Items.AddRange(new object[] {
-            "",
-            "BiDirectional Bubble Sort",
-            "Bubble Sort",
-            "Comb Sort",
-            "Counting Sort",
-            "Cycle Sort",
-            "Gnome Sort",
-            "Heap Sort",
-            "Insertion Sort",
-            "Merge Sort (In Place)",
-            "Merge Sort (Double Storage)",
-            "Odd-Even Sort",
-            "Pigeonhole Sort",
-            "Quicksort",
-            "Quicksort with Insertion Sort",
-            "Radix Sort",
-            "Selection Sort",
-            "Shell Sort",
-            "Smoothsort",
-            "Timsort"});
-            this.cboAlg2.Location = new System.Drawing.Point(219, 219);
-            this.cboAlg2.Name = "cboAlg2";
-            this.cboAlg2.Size = new System.Drawing.Size(200, 21);
-            this.cboAlg2.TabIndex = 3;
+            cboAlg2.Anchor = AnchorStyles.Bottom;
+            cboAlg2.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboAlg2.FormattingEnabled = true;
+            cboAlg2.Items.AddRange(new object[] { "", "BiDirectional Bubble Sort", "Bubble Sort", "Comb Sort", "Counting Sort", "Cycle Sort", "Gnome Sort", "Heap Sort", "Insertion Sort", "Merge Sort (In Place)", "Merge Sort (Double Storage)", "Odd-Even Sort", "Pigeonhole Sort", "Quicksort", "Quicksort with Insertion Sort", "Radix Sort", "Selection Sort", "Shell Sort", "Smoothsort", "Timsort" });
+            cboAlg2.Location = new Point(420, 516);
+            cboAlg2.Margin = new Padding(5, 4, 5, 4);
+            cboAlg2.Name = "cboAlg2";
+            cboAlg2.Size = new Size(298, 28);
+            cboAlg2.TabIndex = 3;
             // 
             // cmdSort
             // 
-            this.cmdSort.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.cmdSort.Location = new System.Drawing.Point(13, 312);
-            this.cmdSort.Name = "cmdSort";
-            this.cmdSort.Size = new System.Drawing.Size(406, 23);
-            this.cmdSort.TabIndex = 5;
-            this.cmdSort.Text = "Sort";
-            this.cmdSort.UseVisualStyleBackColor = true;
-            this.cmdSort.Click += new System.EventHandler(this.CmdSort_Click);
+            cmdSort.Anchor = AnchorStyles.Bottom;
+            cmdSort.Location = new Point(112, 659);
+            cmdSort.Margin = new Padding(5, 4, 5, 4);
+            cmdSort.Name = "cmdSort";
+            cmdSort.Size = new Size(609, 36);
+            cmdSort.TabIndex = 5;
+            cmdSort.Text = "Sort";
+            cmdSort.UseVisualStyleBackColor = true;
+            cmdSort.Click += CmdSort_Click;
             // 
             // pnlSort1
             // 
-            this.pnlSort1.BackColor = System.Drawing.Color.White;
-            this.pnlSort1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlSort1.Location = new System.Drawing.Point(13, 12);
-            this.pnlSort1.Name = "pnlSort1";
-            this.pnlSort1.Size = new System.Drawing.Size(200, 200);
-            this.pnlSort1.TabIndex = 6;
-            this.pnlSort1.TabStop = false;
+            pnlSort1.BackColor = Color.White;
+            pnlSort1.BorderStyle = BorderStyle.FixedSingle;
+            pnlSort1.Location = new Point(19, 19);
+            pnlSort1.Margin = new Padding(5, 4, 5, 4);
+            pnlSort1.Name = "pnlSort1";
+            pnlSort1.Size = new Size(299, 306);
+            pnlSort1.TabIndex = 6;
+            pnlSort1.TabStop = false;
             // 
             // pnlSort2
             // 
-            this.pnlSort2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pnlSort2.BackColor = System.Drawing.Color.White;
-            this.pnlSort2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlSort2.Location = new System.Drawing.Point(219, 12);
-            this.pnlSort2.Name = "pnlSort2";
-            this.pnlSort2.Size = new System.Drawing.Size(200, 200);
-            this.pnlSort2.TabIndex = 7;
-            this.pnlSort2.TabStop = false;
+            pnlSort2.Anchor = AnchorStyles.Top;
+            pnlSort2.BackColor = Color.White;
+            pnlSort2.BorderStyle = BorderStyle.FixedSingle;
+            pnlSort2.Location = new Point(420, 19);
+            pnlSort2.Margin = new Padding(5, 4, 5, 4);
+            pnlSort2.Name = "pnlSort2";
+            pnlSort2.Size = new Size(299, 306);
+            pnlSort2.TabIndex = 7;
+            pnlSort2.TabStop = false;
             // 
             // tbSamples
             // 
-            this.tbSamples.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.tbSamples.LargeChange = 10;
-            this.tbSamples.Location = new System.Drawing.Point(137, 256);
-            this.tbSamples.Maximum = 1000;
-            this.tbSamples.Minimum = 10;
-            this.tbSamples.Name = "tbSamples";
-            this.tbSamples.Size = new System.Drawing.Size(120, 45);
-            this.tbSamples.TabIndex = 8;
-            this.tbSamples.TickFrequency = 100;
-            this.tbSamples.Value = 100;
-            this.tbSamples.Scroll += new System.EventHandler(this.tbSamples_Scroll);
+            tbSamples.Anchor = AnchorStyles.Bottom;
+            tbSamples.LargeChange = 10;
+            tbSamples.Location = new Point(298, 572);
+            tbSamples.Margin = new Padding(5, 4, 5, 4);
+            tbSamples.Maximum = 1000;
+            tbSamples.Minimum = 10;
+            tbSamples.Name = "tbSamples";
+            tbSamples.Size = new Size(180, 45);
+            tbSamples.TabIndex = 8;
+            tbSamples.TickFrequency = 100;
+            tbSamples.Value = 100;
+            tbSamples.Scroll += tbSamples_Scroll;
             // 
             // lblSamples
             // 
-            this.lblSamples.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.lblSamples.AutoSize = true;
-            this.lblSamples.Location = new System.Drawing.Point(10, 256);
-            this.lblSamples.Name = "lblSamples";
-            this.lblSamples.Size = new System.Drawing.Size(121, 13);
-            this.lblSamples.TabIndex = 9;
-            this.lblSamples.Text = "Number of samples: 100";
+            lblSamples.Anchor = AnchorStyles.Bottom;
+            lblSamples.AutoSize = true;
+            lblSamples.Location = new Point(108, 572);
+            lblSamples.Margin = new Padding(5, 0, 5, 0);
+            lblSamples.Name = "lblSamples";
+            lblSamples.Size = new Size(181, 20);
+            lblSamples.TabIndex = 9;
+            lblSamples.Text = "Number of samples: 100";
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 288);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 13);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Sorting speed:";
+            label1.Anchor = AnchorStyles.Bottom;
+            label1.AutoSize = true;
+            label1.Location = new Point(108, 621);
+            label1.Margin = new Padding(5, 0, 5, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(112, 20);
+            label1.TabIndex = 10;
+            label1.Text = "Sorting speed:";
             // 
             // tbSpeed
             // 
-            this.tbSpeed.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.tbSpeed.Location = new System.Drawing.Point(137, 288);
-            this.tbSpeed.Maximum = 20;
-            this.tbSpeed.Minimum = 1;
-            this.tbSpeed.Name = "tbSpeed";
-            this.tbSpeed.Size = new System.Drawing.Size(120, 45);
-            this.tbSpeed.TabIndex = 11;
-            this.tbSpeed.Value = 7;
+            tbSpeed.Anchor = AnchorStyles.Bottom;
+            tbSpeed.Location = new Point(298, 621);
+            tbSpeed.Margin = new Padding(5, 4, 5, 4);
+            tbSpeed.Maximum = 20;
+            tbSpeed.Minimum = 1;
+            tbSpeed.Name = "tbSpeed";
+            tbSpeed.Size = new Size(180, 45);
+            tbSpeed.TabIndex = 11;
+            tbSpeed.Value = 7;
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(120, 288);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(24, 13);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Min";
+            label2.Anchor = AnchorStyles.Bottom;
+            label2.AutoSize = true;
+            label2.Location = new Point(273, 621);
+            label2.Margin = new Padding(5, 0, 5, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(34, 20);
+            label2.TabIndex = 12;
+            label2.Text = "Min";
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(252, 288);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(27, 13);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Max";
+            label3.Anchor = AnchorStyles.Bottom;
+            label3.AutoSize = true;
+            label3.Location = new Point(471, 621);
+            label3.Margin = new Padding(5, 0, 5, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(38, 20);
+            label3.TabIndex = 13;
+            label3.Text = "Max";
             // 
             // ddTypeOfData
             // 
-            this.ddTypeOfData.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.ddTypeOfData.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ddTypeOfData.FormattingEnabled = true;
-            this.ddTypeOfData.Items.AddRange(new object[] {
-            "Random",
-            "Reversed",
-            "Sorted",
-            "Nearly Sorted",
-            "Few Unique"});
-            this.ddTypeOfData.Location = new System.Drawing.Point(255, 256);
-            this.ddTypeOfData.Name = "ddTypeOfData";
-            this.ddTypeOfData.Size = new System.Drawing.Size(164, 21);
-            this.ddTypeOfData.TabIndex = 34;
+            ddTypeOfData.Anchor = AnchorStyles.Bottom;
+            ddTypeOfData.DropDownStyle = ComboBoxStyle.DropDownList;
+            ddTypeOfData.FormattingEnabled = true;
+            ddTypeOfData.Items.AddRange(new object[] { "Random", "Reversed", "Sorted", "Nearly Sorted", "Few Unique" });
+            ddTypeOfData.Location = new Point(476, 572);
+            ddTypeOfData.Margin = new Padding(5, 4, 5, 4);
+            ddTypeOfData.Name = "ddTypeOfData";
+            ddTypeOfData.Size = new Size(244, 28);
+            ddTypeOfData.TabIndex = 34;
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(434, 347);
-            this.Controls.Add(this.cmdSort);
-            this.Controls.Add(this.ddTypeOfData);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.tbSpeed);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblSamples);
-            this.Controls.Add(this.tbSamples);
-            this.Controls.Add(this.pnlSort2);
-            this.Controls.Add(this.cboAlg2);
-            this.Controls.Add(this.cboAlg1);
-            this.Controls.Add(this.pnlSort1);
-            this.MaximumSize = new System.Drawing.Size(10000, 10000);
-            this.MinimumSize = new System.Drawing.Size(450, 386);
-            this.Name = "frmMain";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sort Comparison";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.Resize += new System.EventHandler(this.frmMain_Resize);
-            ((System.ComponentModel.ISupportInitialize)(this.pnlSort1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlSort2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbSamples)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbSpeed)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(9F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(837, 712);
+            Controls.Add(cmdSort);
+            Controls.Add(ddTypeOfData);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(tbSpeed);
+            Controls.Add(label1);
+            Controls.Add(lblSamples);
+            Controls.Add(tbSamples);
+            Controls.Add(pnlSort2);
+            Controls.Add(cboAlg2);
+            Controls.Add(cboAlg1);
+            Controls.Add(pnlSort1);
+            Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            ImeMode = ImeMode.Off;
+            Margin = new Padding(5, 4, 5, 4);
+            MaximumSize = new Size(19271, 20472);
+            MinimumSize = new Size(853, 751);
+            Name = "frmMain";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Sort Comparison";
+            FormClosing += frmMain_FormClosing;
+            Load += Form1_Load;
+            Resize += frmMain_Resize;
+            ((System.ComponentModel.ISupportInitialize)pnlSort1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pnlSort2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)tbSamples).EndInit();
+            ((System.ComponentModel.ISupportInitialize)tbSpeed).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
