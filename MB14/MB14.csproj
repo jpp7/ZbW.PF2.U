@@ -7,4 +7,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="PriorityQueue\MaxHeap\Loesung\MaxHeap.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="PriorityQueue\MaxHeap\Loesung\MaxHeap.txt" />
+  </ItemGroup>
+
 </Project>
