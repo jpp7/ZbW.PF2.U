@@ -1,4 +1,4 @@
-﻿namespace MB14.PriorityQueue.MaxHeap.Loesung
+﻿namespace MB14.PriorityQueue.MaxHeap
 {
     public class MaxHeap
     {
