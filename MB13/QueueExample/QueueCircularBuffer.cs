@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MB10.QueueExample
+namespace MB13.QueueExample
 {
     public class QueueCircularBuffer
     {

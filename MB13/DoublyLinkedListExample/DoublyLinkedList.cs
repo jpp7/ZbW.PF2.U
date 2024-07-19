@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MB10.DoublyLinkedListExample
+namespace MB13.DoublyLinkedListExample
 {
     public class DoublyLinkedList
     {
