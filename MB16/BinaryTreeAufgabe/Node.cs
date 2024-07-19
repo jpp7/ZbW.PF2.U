@@ -1,4 +1,4 @@
-﻿namespace MB13.BinaryTreeAufgabe
+﻿namespace MB16.BinaryTreeAufgabe
 {
     public sealed class Node<TNode> where TNode : IComparable<TNode>
     {
