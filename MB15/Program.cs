@@ -1,4 +1,6 @@
 ﻿using MB15.SortComparison;
+using System;
+using System.Windows.Forms;
 
 namespace MB15
 {

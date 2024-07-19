@@ -1,4 +1,6 @@
-﻿namespace MB15.SortComparison.SortingAlgorithms
+﻿using System.Collections.Generic;
+
+namespace MB15.SortComparison.SortingAlgorithms
 {
     public class BubbleSort : SortAlgorithm
     {

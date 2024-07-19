@@ -1,4 +1,7 @@
-﻿namespace MB11.SortComparison
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace MB15.SortComparison
 {
     partial class frmMain
     {

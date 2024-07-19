@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using MB15.SortComparison;
 
-namespace MB11.SortComparison.SortingAlgorithms
+namespace MB15.SortComparison.SortingAlgorithms
 {
 
     public class BinaryTreeSort : SortAlgorithm
