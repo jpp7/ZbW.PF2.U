@@ -1,6 +1,6 @@
-﻿using MB13.DoublyLinkedListExample;
+﻿using MB14.DoublyLinkedListExample;
 
-namespace MB13.QueueExample
+namespace MB14.QueueExample
 {
     public class QueueLinkedList
     {

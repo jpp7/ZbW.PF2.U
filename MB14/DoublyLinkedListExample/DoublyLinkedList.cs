@@ -1,7 +1,20 @@
-﻿namespace MB13.DoublyLinkedListExample
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MB14.DoublyLinkedListExample
 {
-    internal class DoublyLinkedList
+    public class DoublyLinkedList
     {
+        private sealed class Node
+        {
+            public object Data { get; set; }
+            public Node Link { get; set; }
+            public Node PrevLink { get; set; }
+        }
+
         private Node start;
         private Node end;
         public int Count { get; private set; }
@@ -171,6 +184,5 @@
             start = end = null;
             Count = 0;
         }
-
     }
 }

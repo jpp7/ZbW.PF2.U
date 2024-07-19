@@ -4,20 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MB13.QueueExample
+namespace MB13.StackArray.Loesung
 {
-    public class QueueAsArray
+    internal class StackArray
     {
         private object[] items;
 
         public int Count { get; private set; }
 
-        public QueueAsArray(int length = 0)
+        public StackArray(int length = 0)
         {
             items = new object[length == 0 ? 10 : length];
         }
 
-        public void Enqueue(object item)
+        public void Push(object item)
         {
             grow();
 
@@ -29,22 +29,18 @@ namespace MB13.QueueExample
         public object Peek()
         {
             if (Count == 0)
-                throw new InvalidOperationException("No items in queue.");
+                throw new InvalidOperationException("No items on stack.");
 
-            return items[0];
+            return items[Count - 1];
         }
 
-        public object Dequeue()
+        public object Pop()
         {
             if (Count == 0)
-                throw new InvalidOperationException("No items in queue.");
+                throw new InvalidOperationException("No items on stack.");
 
-            object item = items[0];
-
-            Array.Copy(items, 1, items, 0, Count - 1);
-
-            items[Count - 1] = default(object);
-
+            object item = items[Count - 1];
+            items[Count - 1] = default;
             Count--;
 
             return item;
@@ -69,3 +65,4 @@ namespace MB13.QueueExample
         }
     }
 }
+

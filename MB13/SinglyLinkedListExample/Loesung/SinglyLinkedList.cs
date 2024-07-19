@@ -1,11 +1,14 @@
-﻿namespace MB13.DoublyLinkedListExample
+﻿
+namespace MB13.Loesung.SinglyLinkedListExample
 {
-    internal class DoublyLinkedList
+    public class SinglyLinkedList
     {
         private Node start;
         private Node end;
+
         public int Count { get; private set; }
 
+        #region Aufgabe 1: Add-Methode
         public void Add(object data)
         {
             var newItem = new Node() { Data = data, Link = null };
@@ -18,37 +21,13 @@
             else
             {
                 end.Link = newItem;
-                newItem.PrevLink = end;
-
                 end = newItem;
             }
             Count++;
         }
+        #endregion
 
-        public bool InsertAfter(object previousData, object data)
-        {
-            var previousNode = Find(previousData);
-            if (previousNode == null)
-            {
-                return false;
-            }
-
-            var newNode = new Node() { Data = data };
-            newNode.Link = previousNode.Link;
-            newNode.PrevLink = previousNode;
-
-            previousNode.Link = newNode;
-
-            if (newNode.Link != null)
-                newNode.Link.PrevLink = newNode;
-            else
-                end = newNode;
-
-            Count++;
-
-            return true;
-        }
-
+        #region Aufgabe 2: Contains-Methode
         public bool Contains(object data)
         {
             return Find(data) != null;
@@ -69,7 +48,9 @@
             }
             return null;
         }
+        #endregion
 
+        #region Aufgabe 3: Remove-Methode
         public bool Remove(object data)
         {
             var node = Find(data);
@@ -78,29 +59,26 @@
             {
                 return false;
             }
+            var previousNode = FindPrevious(data);
 
-            if (start == node)
+            if (previousNode != null)
             {
-                // Anfang soll gelöscht werden, first korrigieren
+                // aus Mitte oder Ende entfernen
+                previousNode.Link = node.Link;
+                if (node == end)
+                {
+                    end = previousNode;
+                }
+            }
+            else
+            {
+                // ersten entfernen, previousNode == null
                 start = node.Link;
-            }
-
-            if (end == node)
-            {
-                // Ende soll gelöscht werden, last korrigieren
-                end = node.PrevLink;
-            }
-
-            if (node.PrevLink != null)
-            {
-                // Wenn es einen Vorgänger gibt, dessen verweis korrigieren
-                node.PrevLink.Link = node.Link;
-            }
-
-            if (node.Link != null)
-            {
-                // Wenn es einen Nachfolger gibt, dessen verweis korrigieren
-                node.Link.PrevLink = node.PrevLink;
+                if (start == null)
+                {
+                    // Liste leer
+                    end = null;
+                }
             }
 
             Count--;
@@ -125,7 +103,9 @@
             }
             return null;
         }
+        #endregion
 
+        #region Aufgabe 4: Find-Methode
         public object FindByIndex(int index)
         {
             return FindByIndexInternal(index)?.Data;
@@ -152,7 +132,9 @@
             }
             return null;
         }
+        #endregion
 
+        #region Aufgabe 5: Indexer
         public object this[int index]
         {
             get { return this.FindByIndexInternal(index)?.Data; }
@@ -165,12 +147,6 @@
                 }
             }
         }
-
-        public void Clear()
-        {
-            start = end = null;
-            Count = 0;
-        }
-
+        #endregion
     }
 }
