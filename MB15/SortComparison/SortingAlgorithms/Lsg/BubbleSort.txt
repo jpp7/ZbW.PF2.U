@@ -8,22 +8,37 @@ namespace MB11.SortComparison.SortingAlgorithms.Lsg
         public override string Name => "Bubblesort";
         public override void Sort(IList<int> arrayToSort)
         {
-            var swapMade = true;
-            var n = arrayToSort.Count - 1;
-            for (var i = 0; i < n && swapMade; i++)
+            //var swapMade = true;
+            //var n = arrayToSort.Count - 1;
+            //for (var i = 0; i < n && swapMade; i++)
+            //{
+            //    swapMade = false;
+            //
+            //    for (var j = n; j > i; j--)
+            //    {
+            //        var num1 = arrayToSort[j - 1];
+            //        var num2 = arrayToSort[j];
+            //        if (num1 > num2)
+            //        {
+            //            SwapItems(arrayToSort, j - 1, j);
+            //            swapMade = true;
+            //        }
+            //    }
+            //}
+            
+            int n = arrayToSort.Count;
+            while (n > 1)
             {
-                swapMade = false;
-
-                for (var j = n; j > i; j--)
+                int lastSwapIndex = 0;
+                for (int j = 1; j < n; j++)
                 {
-                    var num1 = arrayToSort[j - 1];
-                    var num2 = arrayToSort[j];
-                    if (num1 > num2)
+                    if (arrayToSort[j - 1] > arrayToSort[j])
                     {
                         SwapItems(arrayToSort, j - 1, j);
-                        swapMade = true;
+                        lastSwapIndex = j;
                     }
                 }
+                n = lastSwapIndex; // Ab hier ist alles sortiert
             }
         }
 

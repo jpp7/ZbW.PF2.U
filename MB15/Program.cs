@@ -1,9 +1,14 @@
-﻿using MB15.SortComparison;
-using System;
+﻿using System;
 using System.Windows.Forms;
+using MB15.SortComparison;
 
 namespace MB15
 {
+    /// <summary>
+    /// The Program class serves as the entry point for the application.
+    /// This class is marked as static, indicating that it cannot be instantiated
+    /// and is intended to house static members only.
+    /// </summary>
     static class Program
     {
         /// <summary>
